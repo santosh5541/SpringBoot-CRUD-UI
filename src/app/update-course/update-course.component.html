@@ -1,0 +1,17 @@
+<!-- add-course.component.html -->
+<div class="container-fluid col-5">
+    <br>
+    <h3 style="text-align: center;">Update Course</h3>
+    <form>
+        <div class="mb-3">
+            <label for="exampleInputname1" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" aria-describedby="nameHelp" name="name"[(ngModel)]="course.name">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputNumber" class="form-label">Price</label>
+            <input type="number" class="form-control" id="price" name="price" [(ngModel)]="course.price">
+        </div>
+        <br>
+        <button type="button" (click)="updateCourse(course.cid)" class="btn btn-success">Submit</button>
+    </form>
+</div>

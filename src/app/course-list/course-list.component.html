@@ -1,0 +1,27 @@
+<!-- course-list.component.html -->
+<link rel="stylesheet" href="./course-list.component.css">
+
+<div class="container-fluid">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">SN</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cou of courses">
+        <th scope="row">{{ cou.cid }}</th>
+        <td>{{ cou.name }}</td>
+        <td>{{ cou.price }}</td>
+        <td>
+          <!-- Pass the course ID to the updateCourseRecord() method -->
+          <button type="button" (click)="updateCourseRecord(cou.cid)" class="btn btn-dark button-gap">Update</button>
+          <button type="button" (click)="deleteCourseRecord(cou.cid)" class="btn btn-danger button-gap">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
